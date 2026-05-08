@@ -3,152 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PT Shafira Satya Utama | Heavy Equipment & Mining Contractor</title>
+    <title>PT Shafira Satya Utama | Mining & Heavy Equipment Contractor</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
     
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0f172a; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .hero-gradient { background: radial-gradient(circle at top right, #3730a3, #0f172a); }
-        .text-gradient { background: linear-gradient(to right, #818cf8, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .card-hover:hover { transform: translateY(-12px); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); }
-        
-        .img-zoom { overflow: hidden; border-radius: 28px; }
-        .img-zoom img { transition: transform 0.7s ease; width: 100%; height: 100%; object-cover: cover; }
-        .img-zoom:hover img { transform: scale(1.1); }
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1e293b; }
+        h1, h2, h3, .nav-link { font-family: 'Outfit', sans-serif; }
+        .nav-sticky { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border-bottom: 1px solid #e2e8f0; }
+        .hero-overlay { background: linear-gradient(to right, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.2)); }
+        .section-title::after { content: ''; display: block; width: 60px; height: 4px; background: #4f46e5; margin-top: 16px; }
     </style>
 </head>
-<body class="text-slate-200 overflow-x-hidden">
+<body class="antialiased">
 
-    <nav class="fixed w-full z-50 px-6 py-5">
-        <div class="max-w-7xl mx-auto glass rounded-2xl px-6 py-3 flex justify-between items-center shadow-2xl">
-            <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-500/50">
-                    <i class="fas fa-helmet-safety text-white"></i>
+    <nav class="fixed w-full z-50 nav-sticky py-4 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-indigo-600 flex items-center justify-center rounded">
+                    <i class="fas fa-helmet-safety text-white text-sm"></i>
                 </div>
-                <div class="flex flex-col">
-                    <span class="text-lg font-extrabold tracking-tight text-white leading-none">PT SSU</span>
-                    <span class="text-[10px] uppercase tracking-[0.2em] text-indigo-400 font-bold">KALTIM</span>
-                </div>
+                <span class="text-xl font-bold tracking-tighter text-slate-900">PT SSU <span class="text-indigo-600 text-sm font-medium tracking-normal block md:inline ml-1">KALTIM</span></span>
             </div>
             
-            <div class="hidden md:flex space-x-10 text-[11px] font-bold uppercase tracking-widest text-slate-400">
-                <a href="#profil" class="hover:text-white transition">Profil</a>
-                <a href="#armada" class="hover:text-white transition">Armada</a>
-                <a href="#kontak" class="hover:text-white transition">Kontak</a>
+            <div class="hidden md:flex space-x-10 text-[12px] font-bold uppercase tracking-widest text-slate-500">
+                <a href="#home" class="hover:text-indigo-600 transition">Beranda</a>
+                <a href="#tentang" class="hover:text-indigo-600 transition">Tentang Kami</a>
+                <a href="#layanan" class="hover:text-indigo-600 transition">Layanan</a>
+                <a href="#armada" class="hover:text-indigo-600 transition">Armada</a>
+                <a href="#kontak" class="hover:text-indigo-600 transition text-indigo-600">Hubungi Kami</a>
             </div>
-
-            <a href="app.html" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               class="bg-indigo-600 hover:bg-indigo-500 text-white px-7 py-2.5 rounded-xl font-bold transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-indigo-600/40 text-sm font-sans uppercase tracking-widest">
-                <i class="fas fa-sign-in-alt mr-2"></i> STAFF LOGIN
-            </a>
         </div>
     </nav>
 
-    <section id="profil" class="relative min-h-screen hero-gradient flex items-center pt-24 overflow-hidden">
-        <div class="absolute inset-0 opacity-10" style="background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');"></div>
+    <section id="home" class="relative h-screen flex items-center overflow-hidden">
+        <img src="img/hero-unit.jpg" class="absolute inset-0 w-full h-full object-cover" alt="PT SSU Mining Operation">
+        <div class="absolute inset-0 hero-overlay"></div>
         
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 relative z-10">
-            <div class="flex flex-col justify-center">
-                <span class="inline-block px-4 py-1.5 bg-indigo-500/10 border border-indigo-500/20 rounded-full text-indigo-400 text-[10px] font-bold uppercase tracking-[0.3em] mb-8 w-fit">
-                    Professional Mining Contractor
-                </span>
-                <h1 class="text-6xl md:text-8xl font-extrabold text-white leading-[0.9] mb-8 tracking-tighter">
-                    Built for <br><span class="text-gradient">Performance.</span>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12">
+            <div class="max-w-2xl">
+                <h1 class="text-5xl md:text-7xl font-bold text-white leading-tight mb-6">
+                    Reliable Partner in <br><span class="text-indigo-400">Mining Solutions.</span>
                 </h1>
-                <p class="text-lg text-slate-400 leading-relaxed max-w-md mb-12 font-light">
-                    PT Shafira Satya Utama menghadirkan keandalan armada berat dan teknologi manajemen operasional modern di Kalimantan Timur.
+                <p class="text-lg text-slate-300 font-light leading-relaxed mb-10">
+                    Menyediakan jasa kontraktor pertambangan dan penyewaan alat berat terintegrasi dengan standar keselamatan dan efisiensi tinggi di Kalimantan Timur.
                 </p>
-                <div class="flex flex-wrap gap-6 text-sm">
-                    <a href="#armada" class="px-10 py-4 bg-white text-slate-900 rounded-2xl font-extrabold hover:bg-indigo-50 transition-all shadow-2xl">
-                        Jelajahi Armada
-                    </a>
-                    <div class="flex items-center space-x-4 px-6 py-4 glass rounded-2xl">
-                        <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                        <span class="font-bold text-slate-300 uppercase tracking-widest">Sistem Online</span>
-                    </div>
+                <a href="#tentang" class="inline-block px-8 py-4 bg-indigo-600 text-white font-bold rounded hover:bg-indigo-700 transition shadow-lg">
+                    Pelajari Lebih Lanjut
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="tentang" class="py-24 px-6 md:px-12 bg-slate-50">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-bold section-title text-slate-900">Membangun Masa Depan Energi Kalimantan.</h2>
+                <div class="mt-10 space-y-6 text-slate-600 leading-relaxed">
+                    <p>PT Shafira Satya Utama hadir sebagai respon atas kebutuhan industri pertambangan yang dinamis. Kami fokus pada kualitas mekanis armada dan ketepatan waktu operasional.</p>
+                    <p>Dengan tim berpengalaman dan sistem manajemen digital yang canggih, kami memastikan setiap proyek berjalan sesuai target produksi klien kami.</p>
                 </div>
             </div>
-
-            <div class="relative group">
-                <div class="absolute -inset-4 bg-indigo-500/20 rounded-[40px] blur-3xl group-hover:bg-indigo-500/30 transition duration-700"></div>
-                <div class="relative rounded-[32px] border border-white/10 overflow-hidden shadow-2xl">
-                    <img src="img/hero-unit.jpg" alt="PT SSU Unit" class="w-full h-full object-cover min-h-[400px]">
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-transparent opacity-60"></div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-white p-8 border-b-4 border-indigo-600 shadow-sm">
+                    <span class="block text-4xl font-bold text-indigo-600 mb-2">10+</span>
+                    <span class="text-xs uppercase tracking-widest font-bold text-slate-400">Unit Alat Berat</span>
+                </div>
+                <div class="bg-white p-8 border-b-4 border-indigo-600 shadow-sm">
+                    <span class="block text-4xl font-bold text-indigo-600 mb-2">100%</span>
+                    <span class="text-xs uppercase tracking-widest font-bold text-slate-400">Safety Record</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="armada" class="py-32 px-6">
+    <section id="armada" class="py-24 px-6 md:px-12 bg-white">
         <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-6">
-                <div>
-                    <h2 class="text-5xl font-extrabold text-white mb-4 tracking-tight text-sans">Armada Kami.</h2>
-                    <p class="text-indigo-400 uppercase tracking-[0.4em] text-[10px] font-black">Heavy Equipment Inventory</p>
-                </div>
-                <div class="h-[1px] flex-grow bg-white/10 mx-10 hidden md:block"></div>
-                <p class="text-slate-500 text-sm max-w-xs text-right font-light italic">Menjamin performa mekanis maksimal di setiap lokasi kerja.</p>
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Armada Kami</h2>
+                <p class="text-slate-500 max-w-xl mx-auto">Unit pilihan dengan perawatan berkala untuk hasil kerja maksimal.</p>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div class="glass p-5 rounded-[35px] card-hover transition-all duration-500 group">
-                    <div class="h-72 img-zoom relative mb-8">
-                        <img src="img/unit1.jpg" alt="Unit SSU">
-                        <div class="absolute bottom-4 right-4 glass px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest text-white">
-                            Bulldozer
-                        </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-lg mb-4 h-64 bg-slate-200">
+                        <img src="img/unit1.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                     </div>
-                    <div class="px-4 pb-4">
-                        <h3 class="text-2xl font-bold text-white mb-3">Komatsu D85SS</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed font-light mb-8 font-sans">Unit handal untuk pekerjaan Overburden Removal dan Land Clearing skala besar.</p>
-                        <div class="flex justify-between items-center pt-6 border-t border-white/5">
-                            <span class="text-[10px] font-black text-indigo-500 uppercase tracking-widest font-sans tracking-widest">Ready to Work</span>
-                            <div class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-indigo-600 transition">
-                                <i class="fas fa-chevron-right text-[10px] text-white"></i>
-                            </div>
-                        </div>
-                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">Komatsu D85SS</h3>
+                    <p class="text-sm text-slate-500 mt-1 uppercase tracking-tighter">Bulldozer Division</p>
                 </div>
                 </div>
         </div>
     </section>
 
-    <footer id="kontak" class="bg-[#0a0f1d] py-24 px-6 border-t border-white/5">
+    <footer id="kontak" class="bg-slate-900 text-white py-20 px-6 md:px-12">
         <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-24 items-center">
-                <div>
-                    <h4 class="text-4xl font-bold text-white mb-8 tracking-tight">Kontak Operasional.</h4>
-                    <p class="text-slate-500 mb-10 leading-relaxed font-light font-sans">Hubungi pusat operasional kami di Samarinda untuk informasi kemitraan dan penyewaan unit.</p>
-                    <div class="space-y-6">
-                        <div class="flex items-center space-x-5 text-slate-300">
-                            <i class="fas fa-map-marker-alt text-indigo-500"></i>
-                            <span class="font-medium font-sans">Samarinda, Kalimantan Timur</span>
+            <div class="grid md:grid-cols-3 gap-12 border-b border-slate-800 pb-16">
+                <div class="col-span-1">
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-6 h-6 bg-indigo-600 flex items-center justify-center rounded">
+                            <i class="fas fa-helmet-safety text-white text-[10px]"></i>
                         </div>
-                        <div class="flex items-center space-x-5 text-slate-300">
-                            <i class="fas fa-envelope text-indigo-500 font-sans italic"></i>
-                            <span class="font-medium font-sans">admin@ssukaltim.my.id</span>
-                        </div>
+                        <span class="text-lg font-bold">PT SSU</span>
                     </div>
+                    <p class="text-slate-400 text-sm leading-relaxed">Professional Mining & Heavy Equipment Contractor. Berbasis di Samarinda, Kalimantan Timur.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-6 text-sm uppercase tracking-widest">Kontak</h4>
+                    <ul class="text-slate-400 text-sm space-y-4 font-light">
+                        <li><i class="fas fa-map-marker-alt mr-3 text-indigo-500"></i> Samarinda, Kalimantan Timur</li>
+                        <li><i class="fas fa-envelope mr-3 text-indigo-500"></i> admin@ssukaltim.my.id</li>
+                    </ul>
                 </div>
 
-                <div class="glass p-12 rounded-[40px] relative">
-                    <h5 class="text-2xl font-bold text-white mb-4">Portal Internal</h5>
-                    <p class="text-sm text-slate-500 mb-10 leading-relaxed font-light font-sans">Akses manajemen payroll dan laporan harian khusus karyawan PT SSU.</p>
+                <div class="bg-slate-800/50 p-8 rounded-lg border border-slate-700">
+                    <h4 class="font-bold mb-4 text-sm text-white">Staff Resources</h4>
+                    <p class="text-xs text-slate-500 mb-6 font-light italic">Halaman akses terbatas untuk manajemen data internal dan payroll PT SSU.</p>
                     <a href="app.html" 
                        target="_blank" 
-                       rel="noopener noreferrer"
-                       class="inline-block w-full text-center py-5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-2xl font-black uppercase tracking-widest text-xs transition-all shadow-xl shadow-indigo-600/30">
-                        Internal Login &rsaquo;
+                       class="text-xs font-bold text-indigo-400 hover:text-white transition flex items-center group">
+                        INTERNAL LOGIN <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition"></i>
                     </a>
                 </div>
             </div>
-            <div class="text-center border-t border-white/5 pt-12 mt-20">
-                <p class="text-[10px] font-bold text-slate-600 uppercase tracking-[0.5em]">© 2026 PT Shafira Satya Utama</p>
+            
+            <div class="pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-slate-600 uppercase tracking-[0.3em] font-bold">
+                <p>© 2026 PT Shafira Satya Utama</p>
+                <p class="mt-4 md:mt-0 italic">Excellence in Mining Operation</p>
             </div>
         </div>
     </footer>
