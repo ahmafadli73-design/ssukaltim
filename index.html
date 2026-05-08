@@ -15,9 +15,8 @@
         .text-gradient { background: linear-gradient(to right, #818cf8, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .card-hover:hover { transform: translateY(-12px); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); }
         
-        /* Animasi halu untuk gambar */
-        .img-zoom { overflow: hidden; }
-        .img-zoom img { transition: transform 0.7s ease; }
+        .img-zoom { overflow: hidden; border-radius: 28px; }
+        .img-zoom img { transition: transform 0.7s ease; width: 100%; height: 100%; object-cover: cover; }
         .img-zoom:hover img { transform: scale(1.1); }
     </style>
 </head>
@@ -31,13 +30,12 @@
                 </div>
                 <div class="flex flex-col">
                     <span class="text-lg font-extrabold tracking-tight text-white leading-none">PT SSU</span>
-                    <span class="text-[10px] uppercase tracking-[0.2em] text-indigo-400 font-bold">KALIMANTAN TIMUR</span>
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-indigo-400 font-bold">KALTIM</span>
                 </div>
             </div>
             
             <div class="hidden md:flex space-x-10 text-[11px] font-bold uppercase tracking-widest text-slate-400">
                 <a href="#profil" class="hover:text-white transition">Profil</a>
-                <a href="#layanan" class="hover:text-white transition">Layanan</a>
                 <a href="#armada" class="hover:text-white transition">Armada</a>
                 <a href="#kontak" class="hover:text-white transition">Kontak</a>
             </div>
@@ -45,8 +43,8 @@
             <a href="https://app.ssukaltim.my.id" 
                target="_blank" 
                rel="noopener noreferrer"
-               class="..."> 
-               STAFF LOGIN 
+               class="bg-indigo-600 hover:bg-indigo-500 text-white px-7 py-2.5 rounded-xl font-bold transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-indigo-600/40 text-sm font-sans uppercase tracking-widest">
+                <i class="fas fa-sign-in-alt mr-2"></i> STAFF LOGIN
             </a>
         </div>
     </nav>
@@ -57,29 +55,29 @@
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 relative z-10">
             <div class="flex flex-col justify-center">
                 <span class="inline-block px-4 py-1.5 bg-indigo-500/10 border border-indigo-500/20 rounded-full text-indigo-400 text-[10px] font-bold uppercase tracking-[0.3em] mb-8 w-fit">
-                    Est. 2024 • Samarinda
+                    Professional Mining Contractor
                 </span>
                 <h1 class="text-6xl md:text-8xl font-extrabold text-white leading-[0.9] mb-8 tracking-tighter">
                     Built for <br><span class="text-gradient">Performance.</span>
                 </h1>
                 <p class="text-lg text-slate-400 leading-relaxed max-w-md mb-12 font-light">
-                    Solusi kontraktor pertambangan terintegrasi dengan dukungan armada alat berat handal dan sistem manajemen operasional berbasis data.
+                    PT Shafira Satya Utama menghadirkan keandalan armada berat dan teknologi manajemen operasional modern di Kalimantan Timur.
                 </p>
-                <div class="flex flex-wrap gap-6">
-                    <a href="#armada" class="px-10 py-4 bg-white text-slate-900 rounded-2xl font-extrabold hover:bg-indigo-50 transition-all shadow-2xl hover:shadow-white/10">
+                <div class="flex flex-wrap gap-6 text-sm">
+                    <a href="#armada" class="px-10 py-4 bg-white text-slate-900 rounded-2xl font-extrabold hover:bg-indigo-50 transition-all shadow-2xl">
                         Jelajahi Armada
                     </a>
-                    <div class="flex items-center space-x-4 px-6 py-4 glass rounded-2xl border-white/5">
+                    <div class="flex items-center space-x-4 px-6 py-4 glass rounded-2xl">
                         <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                        <span class="text-sm font-bold text-slate-300 uppercase tracking-widest">Unit BD-076 Ready</span>
+                        <span class="font-bold text-slate-300 uppercase tracking-widest">Sistem Online</span>
                     </div>
                 </div>
             </div>
 
             <div class="relative group">
                 <div class="absolute -inset-4 bg-indigo-500/20 rounded-[40px] blur-3xl group-hover:bg-indigo-500/30 transition duration-700"></div>
-                <div class="relative rounded-[32px] border border-white/10 overflow-hidden shadow-2xl aspect-[4/5] md:aspect-auto">
-                    <img src="img/hero-unit.jpg" alt="PT SSU Unit" class="w-full h-full object-cover">
+                <div class="relative rounded-[32px] border border-white/10 overflow-hidden shadow-2xl">
+                    <img src="img/hero-unit.jpg" alt="PT SSU Unit" class="w-full h-full object-cover min-h-[400px]">
                     <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-transparent opacity-60"></div>
                 </div>
             </div>
@@ -90,96 +88,67 @@
         <div class="max-w-7xl mx-auto">
             <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-6">
                 <div>
-                    <h2 class="text-5xl font-extrabold text-white mb-4 tracking-tight">Armada Kami.</h2>
+                    <h2 class="text-5xl font-extrabold text-white mb-4 tracking-tight text-sans">Armada Kami.</h2>
                     <p class="text-indigo-400 uppercase tracking-[0.4em] text-[10px] font-black">Heavy Equipment Inventory</p>
                 </div>
                 <div class="h-[1px] flex-grow bg-white/10 mx-10 hidden md:block"></div>
-                <p class="text-slate-500 text-sm max-w-xs text-right italic font-light italic">"Menjamin ketersediaan unit dengan performa mekanis maksimal di setiap lokasi kerja."</p>
+                <p class="text-slate-500 text-sm max-w-xs text-right font-light italic">Menjamin performa mekanis maksimal di setiap lokasi kerja.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                 <div class="glass p-5 rounded-[35px] card-hover transition-all duration-500 group">
-                    <div class="h-72 rounded-[28px] img-zoom relative mb-8">
-                        <img src="img/unit1.jpg" class="w-full h-full object-cover">
+                    <div class="h-72 img-zoom relative mb-8">
+                        <img src="img/unit1.jpg" alt="Unit SSU">
                         <div class="absolute bottom-4 right-4 glass px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest text-white">
                             Bulldozer
                         </div>
                     </div>
                     <div class="px-4 pb-4">
                         <h3 class="text-2xl font-bold text-white mb-3">Komatsu D85SS</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed font-light mb-8">Optimal untuk Overburden Removal, Land Clearing, dan heavy pushing di medan ekstrem.</p>
+                        <p class="text-slate-400 text-sm leading-relaxed font-light mb-8 font-sans">Unit handal untuk pekerjaan Overburden Removal dan Land Clearing skala besar.</p>
                         <div class="flex justify-between items-center pt-6 border-t border-white/5">
-                            <span class="text-[10px] font-black text-indigo-500 uppercase tracking-widest">Code: BD-076</span>
+                            <span class="text-[10px] font-black text-indigo-500 uppercase tracking-widest font-sans tracking-widest">Ready to Work</span>
                             <div class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-indigo-600 transition">
                                 <i class="fas fa-chevron-right text-[10px] text-white"></i>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="glass p-5 rounded-[35px] card-hover transition-all duration-500 group">
-                    <div class="h-72 rounded-[28px] img-zoom relative mb-8">
-                        <img src="img/unit2.jpg" class="w-full h-full object-cover">
-                        <div class="absolute bottom-4 right-4 glass px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest text-white">
-                            Excavator
-                        </div>
-                    </div>
-                    <div class="px-4 pb-4">
-                        <h3 class="text-2xl font-bold text-white mb-3">Excavator Series</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed font-light mb-8">Dukungan penggalian presisi dan pemuatan material dengan siklus kerja yang cepat.</p>
-                        <div class="flex justify-between items-center pt-6 border-t border-white/5">
-                            <span class="text-[10px] font-black text-indigo-500 uppercase tracking-widest">Active Fleet</span>
-                            <div class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-indigo-600 transition">
-                                <i class="fas fa-chevron-right text-[10px] text-white"></i>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-            </div>
         </div>
     </section>
 
     <footer id="kontak" class="bg-[#0a0f1d] py-24 px-6 border-t border-white/5">
         <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-24 items-center mb-24">
+            <div class="grid md:grid-cols-2 gap-24 items-center">
                 <div>
-                    <h4 class="text-4xl font-bold text-white mb-8 leading-tight tracking-tight">Kemitraan Strategis <br>& Operasional.</h4>
-                    <p class="text-slate-500 mb-10 leading-relaxed">Hubungi pusat operasional kami di Samarinda untuk informasi penyewaan unit dan kontrak kerja tambang.</p>
-                    
+                    <h4 class="text-4xl font-bold text-white mb-8 tracking-tight">Kontak Operasional.</h4>
+                    <p class="text-slate-500 mb-10 leading-relaxed font-light font-sans">Hubungi pusat operasional kami di Samarinda untuk informasi kemitraan dan penyewaan unit.</p>
                     <div class="space-y-6">
-                        <div class="flex items-center space-x-5 text-slate-300 group">
-                            <div class="w-12 h-12 glass rounded-2xl flex items-center justify-center group-hover:bg-indigo-600 transition">
-                                <i class="fas fa-map-marker-alt text-indigo-400 group-hover:text-white"></i>
-                            </div>
-                            <span class="font-medium">Samarinda, Kalimantan Timur</span>
+                        <div class="flex items-center space-x-5 text-slate-300">
+                            <i class="fas fa-map-marker-alt text-indigo-500"></i>
+                            <span class="font-medium font-sans">Samarinda, Kalimantan Timur</span>
                         </div>
-                        <div class="flex items-center space-x-5 text-slate-300 group">
-                            <div class="w-12 h-12 glass rounded-2xl flex items-center justify-center group-hover:bg-indigo-600 transition">
-                                <i class="fas fa-envelope text-indigo-400 group-hover:text-white"></i>
-                            </div>
-                            <span class="font-medium text-sm italic underline">admin@ssukaltim.my.id</span>
+                        <div class="flex items-center space-x-5 text-slate-300">
+                            <i class="fas fa-envelope text-indigo-500 font-sans italic"></i>
+                            <span class="font-medium font-sans">admin@ssukaltim.my.id</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="glass p-12 rounded-[40px] relative">
-                    <div class="absolute -top-6 -right-6 w-20 h-20 bg-indigo-600/20 blur-2xl rounded-full"></div>
-                    <h5 class="text-2xl font-bold text-white mb-4">Portal Internal SSU</h5>
-                    <p class="text-sm text-slate-500 mb-10 leading-relaxed font-light">Akses khusus manajemen dan staff untuk laporan HM, payroll, serta administrasi karyawan.</p>
-                    
+                    <h5 class="text-2xl font-bold text-white mb-4">Portal Internal</h5>
+                    <p class="text-sm text-slate-500 mb-10 leading-relaxed font-light font-sans">Akses manajemen payroll dan laporan harian khusus karyawan PT SSU.</p>
                     <a href="https://app.ssukaltim.my.id" 
                        target="_blank" 
                        rel="noopener noreferrer"
-                       class="..."> 
-                       Buka Dashboard Payroll &rsaquo;
+                       class="inline-block w-full text-center py-5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-2xl font-black uppercase tracking-widest text-xs transition-all shadow-xl shadow-indigo-600/30">
+                        Buka Dashboard SSU &rsaquo;
                     </a>
-                        
-                    <p class="mt-6 text-[10px] text-center text-slate-600 uppercase tracking-[0.2em]">Authorized Personnel Only</p>
                 </div>
             </div>
-
-            <div class="text-center border-t border-white/5 pt-12">
-                <p class="text-[10px] font-bold text-slate-600 uppercase tracking-[0.5em]">© 2026 PT Shafira Satya Utama • All Rights Reserved</p>
+            <div class="text-center border-t border-white/5 pt-12 mt-20">
+                <p class="text-[10px] font-bold text-slate-600 uppercase tracking-[0.5em]">© 2026 PT Shafira Satya Utama</p>
             </div>
         </div>
     </footer>
