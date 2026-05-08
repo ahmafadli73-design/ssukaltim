@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistem Dashboard | PT Shafira Satya Utama</title>
+    <title>Sistem Dashboard | PT SSU</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -22,31 +22,23 @@
             <i class="fas fa-circle-notch fa-spin text-indigo-500 text-5xl"></i>
         </div>
         <h2 class="text-white text-xl font-bold tracking-widest uppercase">PT SSU DIGITAL SYSTEM</h2>
-        <p class="text-slate-400 mt-2 animate-pulse">Menghubungkan ke Server SSU...</p>
+        <p class="text-slate-400 mt-2 animate-pulse font-sans text-sm">Menghubungkan ke Server SSU...</p>
     </div>
 
-    <iframe id="appFrame" src="https://script.google.com/macros/s/AKfycby6viOiA5CIbvwz8ukFC8GhGSz_PNYkxv4FGGazg5paCJ0YnokTm3YJ29KikiWXvhuG/execc"></iframe>
+    <iframe id="appFrame" src="https://script.google.com/macros/s/AKfycby6viOiA5CIbvwz8ukFC8GhGSz_PNYkxv4FGGazg5paCJ0YnokTm3YJ29KikiWXvhuG/exec"></iframe>
 
     <script>
-        // MASUKKAN LINK GOOGLE SCRIPT BUNG DI SINI
-        var googleScriptUrl = "https://script.google.com/macros/s/AKfycby6viOiA5CIbvwz8ukFC8GhGSz_PNYkxv4FGGazg5paCJ0YnokTm3YJ29KikiWXvhuG/exec";
-        
-        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-        var frame = document.getElementById('appFrame');
         var loader = document.getElementById('loader');
-
-        if (isMobile) {
-            // Jika di HP, langsung lempar (Redirect) supaya tidak error "Unable to open"
-            window.location.href = googleScriptUrl;
-        } else {
-            // Jika di Laptop, tetap di dalam frame biar keren
-            frame.src = googleScriptUrl;
-            
-            // Sembunyikan loader setelah 3 detik (asumsi script sudah mulai muat)
+        
+        // Loader akan hilang otomatis setelah 4 detik
+        // Memberikan waktu untuk script Google memuat di belakang layar
+        setTimeout(function() {
+            loader.style.transition = "opacity 0.5s ease";
+            loader.style.opacity = "0";
             setTimeout(function() {
                 loader.style.display = 'none';
-            }, 3500);
-        }
+            }, 500);
+        }, 4000);
     </script>
 </body>
 </html>
