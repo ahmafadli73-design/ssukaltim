@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT Shafira Satya Utama | Heavy Equipment & Mining Contractor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hero-bg {
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.8)), 
+                        url('img/hero-unit.jpg'); /* GANTI DENGAN FOTO UNIT TERBAIK BUNG */
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-900">
+
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-indigo-600 rounded flex items-center justify-center text-white">
+                    <i class="fas fa-hard-hat"></i>
+                </div>
+                <span class="text-xl font-bold tracking-tighter text-slate-800">PT SSU</span>
+            </div>
+            <div class="hidden md:flex space-x-8 font-medium text-slate-600">
+                <a href="#profil" class="hover:text-indigo-600 transition">Profil</a>
+                <a href="#layanan" class="hover:text-indigo-600 transition">Layanan</a>
+                <a href="#armada" class="hover:text-indigo-600 transition">Armada</a>
+            </div>
+            <a href="app.html" class="bg-indigo-600 text-white px-6 py-2 rounded-full font-bold hover:bg-indigo-700 transition shadow-lg shadow-indigo-200">
+                <i class="fas fa-lock mr-2"></i> STAFF LOGIN
+            </a>
+        </div>
+    </nav>
+
+    <section class="hero-bg min-h-screen flex items-center pt-20 px-6">
+        <div class="max-w-7xl mx-auto text-white">
+            <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
+                Membangun Kalimantan <br><span class="text-indigo-400">dengan Kekuatan Alat Berat.</span>
+            </h1>
+            <p class="text-xl text-slate-300 max-w-2xl mb-10">
+                PT Shafira Satya Utama menyediakan layanan kontraktor pertambangan dan penyewaan alat berat terintegrasi di Samarinda, Kalimantan Timur.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4">
+                <a href="#armada" class="bg-indigo-600 hover:bg-indigo-700 px-8 py-4 rounded-xl font-bold text-center transition">Lihat Armada Kami</a>
+                <a href="#kontak" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 px-8 py-4 rounded-xl font-bold text-center transition">Hubungi Kami</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="armada" class="py-24 px-6 bg-slate-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16">
+                <h2 class="text-4xl font-bold text-slate-900 mb-4">Armada Operasional</h2>
+                <p class="text-slate-500">Unit handal dengan perawatan rutin untuk menjamin produktivitas lapangan.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition group">
+                    <div class="h-64 bg-slate-200 overflow-hidden">
+                        <img src="img/unit1.jpg" alt="Bulldozer" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold">Bulldozer Komatsu D85SS</h3>
+                        <p class="text-slate-500 text-sm mt-2">Spesialis Overburden Removal & Land Clearing.</p>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <footer id="kontak" class="bg-slate-900 text-white py-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 border-b border-slate-800 pb-16">
+            <div>
+                <h3 class="text-2xl font-bold mb-6">PT Shafira Satya Utama</h3>
+                <p class="text-slate-400 mb-6">Samarinda, Kalimantan Timur, Indonesia.</p>
+                <div class="flex space-x-4 text-2xl">
+                    <i class="fab fa-whatsapp hover:text-green-400 cursor-pointer"></i>
+                    <i class="fas fa-envelope hover:text-indigo-400 cursor-pointer"></i>
+                </div>
+            </div>
+            <div class="text-right">
+                <p class="text-slate-500 mb-2 text-sm uppercase tracking-widest font-bold">Akses Internal</p>
+                <a href="app.html" class="text-indigo-400 hover:text-indigo-300 font-bold underline">Portal Karyawan SSU &rsaquo;</a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto pt-8 text-center text-slate-500 text-sm">
+            &copy; 2026 PT SSU Kaltim. Seluruh Hak Cipta Dilindungi.
+        </div>
+    </footer>
+
+</body>
+</html>
