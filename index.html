@@ -4,142 +4,463 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="img/favicon.png">
-    <title>PT Shafira Satya Utama | Mining & Heavy Equipment Contractor</title>
+    <title>PT Shafira Satya Utama | Mining Contractor & Heavy Equipment</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1e293b; }
-        h1, h2, h3, .nav-link { font-family: 'Outfit', sans-serif; }
-        .nav-sticky { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border-bottom: 1px solid #e2e8f0; }
-        .hero-overlay { background: linear-gradient(to right, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.2)); }
-        .section-title::after { content: ''; display: block; width: 60px; height: 4px; background: #4f46e5; margin-top: 16px; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+        * { font-family: 'Inter', sans-serif; }
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(10,15,30,0.88) 0%, rgba(20,30,60,0.78) 100%),
+                        url('img/hero.jpg') center/cover no-repeat fixed;
+        }
+        .divider { background: linear-gradient(90deg,#f59e0b,#ef4444,#6366f1); height:3px; border-radius:9px; }
+        .card-hover { transition: transform .3s, box-shadow .3s; }
+        .card-hover:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,.13); }
+        .nav-link::after { content:''; display:block; height:2px; background:#f59e0b; width:0; transition:width .3s; }
+        .nav-link:hover::after { width:100%; }
     </style>
 </head>
-<body class="antialiased">
+<body class="bg-white text-slate-900 antialiased">
 
-    <nav class="fixed w-full z-50 nav-sticky py-4 px-6 md:px-12">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <img src="img/logo.png" alt="Logo PT SSU" class="h-10 w-auto object-contain">
-                
-                <div class="flex flex-col">
-                    <span class="text-xl font-bold tracking-tighter text-slate-900 leading-none">PT Shafira Satya Utama</span>
-                    <span class="text-[10px] uppercase tracking-[0.2em] text-indigo-600 font-bold">Kalimantan Timur</span>
-                </div>
-            </div>
-            
-            <div class="hidden md:flex space-x-10 text-[12px] font-bold uppercase tracking-widest text-slate-500">
-                <a href="#home" class="hover:text-indigo-600 transition">Beranda</a>
-                <a href="#tentang" class="hover:text-indigo-600 transition">Tentang Kami</a>
-                <a href="#layanan" class="hover:text-indigo-600 transition">Layanan</a>
-                <a href="#armada" class="hover:text-indigo-600 transition">Armada</a>
-                <a href="#kontak" class="hover:text-indigo-600 transition text-indigo-600">Hubungi Kami</a>
-            </div>
+<!-- NAVBAR -->
+<nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 py-3.5 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <img src="img/logo.png" alt="Logo" class="h-10 w-auto" onerror="this.style.display='none'">
+      <div>
+        <div class="font-black text-slate-900 text-sm leading-tight">PT SHAFIRA SATYA UTAMA</div>
+        <div class="text-[10px] text-slate-400 font-semibold uppercase tracking-widest">Mining Operations & Coal Trading</div>
+      </div>
+    </div>
+    <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+      <a href="#tentang"  class="nav-link hover:text-slate-900 transition">Tentang</a>
+      <a href="#layanan"  class="nav-link hover:text-slate-900 transition">Layanan</a>
+      <a href="#armada"   class="nav-link hover:text-slate-900 transition">Armada</a>
+      <a href="#visi"     class="nav-link hover:text-slate-900 transition">Visi & Misi</a>
+      <a href="#kontak"   class="nav-link hover:text-slate-900 transition">Kontak</a>
+    </div>
+    <a href="app.html"
+       class="bg-amber-500 hover:bg-amber-600 text-white px-5 py-2.5 rounded-xl font-bold text-sm transition shadow-lg shadow-amber-200 flex items-center gap-2">
+      <i class="fas fa-lock text-xs"></i> Staff Login
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-bg min-h-screen flex items-center pt-20 px-6">
+  <div class="max-w-7xl mx-auto w-full py-24">
+    <div class="max-w-3xl">
+      <div class="inline-flex items-center gap-2 bg-amber-500/20 border border-amber-500/30 text-amber-400 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
+        <i class="fas fa-hard-hat text-[10px]"></i> Mining Contractor · Samarinda, Kalimantan Timur
+      </div>
+      <h1 class="text-5xl md:text-6xl font-black text-white leading-tight mb-6">
+        Solusi Pertambangan<br>
+        <span class="text-amber-400">Terintegrasi &amp; Profesional</span>
+      </h1>
+      <p class="text-lg text-slate-300 mb-4 leading-relaxed">
+        PT Shafira Satya Utama bergerak dalam bidang jasa pertambangan, batubara, dan rental alat berat.
+        Berkomitmen menyediakan layanan berkualitas dengan tetap menjaga lingkungan.
+      </p>
+      <p class="text-sm text-slate-400 italic mb-10">
+        "Success is not final; failure is not fatal — it is the courage to continue that counts." — Winston Churchill
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="#layanan"
+           class="bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-xl font-bold transition shadow-xl shadow-amber-900/30 flex items-center gap-2">
+          <i class="fas fa-briefcase"></i> Layanan Kami
+        </a>
+        <a href="#kontak"
+           class="bg-white/10 hover:bg-white/20 backdrop-blur border border-white/20 text-white px-8 py-4 rounded-xl font-bold transition flex items-center gap-2">
+          <i class="fas fa-phone"></i> Hubungi Kami
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATISTIK -->
+<section class="bg-slate-900 py-14 px-6">
+  <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+    <div><div class="text-4xl font-black text-amber-400 mb-1">10+</div><div class="text-slate-400 text-sm font-medium">Unit Alat Berat</div></div>
+    <div><div class="text-4xl font-black text-amber-400 mb-1">5+</div><div class="text-slate-400 text-sm font-medium">Tahun Pengalaman</div></div>
+    <div><div class="text-4xl font-black text-amber-400 mb-1">100%</div><div class="text-slate-400 text-sm font-medium">Komitmen Kualitas</div></div>
+    <div><div class="text-4xl font-black text-amber-400 mb-1">24/7</div><div class="text-slate-400 text-sm font-medium">Operasional</div></div>
+  </div>
+</section>
+
+<!-- TENTANG -->
+<section id="tentang" class="py-24 px-6 bg-white">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+    <div>
+      <div class="text-amber-500 font-black text-xs uppercase tracking-widest mb-3">Company Overview</div>
+      <h2 class="text-4xl font-black text-slate-900 mb-4 leading-tight">Pandangan Perusahaan</h2>
+      <div class="divider w-16 mb-8"></div>
+      <p class="text-slate-600 leading-relaxed mb-4">
+        Perkembangan usaha kini mengalami perkembangan yang signifikan. Seiring dengan peningkatan tersebut,
+        kami PT Shafira Satya Utama mengedepankan sumber daya yang berkualitas, sehingga diharapkan mampu
+        bersaing dalam skala global.
+      </p>
+      <p class="text-slate-600 leading-relaxed mb-6">
+        Semoga kehadiran kami di tengah masyarakat dapat memberikan dampak yang positif terhadap dunia,
+        khususnya Indonesia.
+      </p>
+      <p class="text-slate-500 italic text-sm leading-relaxed border-l-4 border-amber-400 pl-4">
+        "Business development is now experiencing significant developments. PT Shafira Satya Utama prioritizes
+        quality resources, expected to compete on a global scale."
+      </p>
+    </div>
+    <div class="grid grid-cols-2 gap-4">
+      <img src="img/about1.jpg" alt="Operasional" class="rounded-2xl w-full h-48 object-cover shadow-lg" onerror="this.style.background='#e2e8f0'">
+      <img src="img/about2.jpg" alt="Tambang" class="rounded-2xl w-full h-48 object-cover shadow-lg mt-8" onerror="this.style.background='#e2e8f0'">
+      <img src="img/about3.jpg" alt="Alat Berat" class="rounded-2xl w-full h-48 object-cover shadow-lg -mt-4" onerror="this.style.background='#e2e8f0'">
+      <img src="img/about4.jpg" alt="Site" class="rounded-2xl w-full h-48 object-cover shadow-lg mt-4" onerror="this.style.background='#e2e8f0'">
+    </div>
+  </div>
+</section>
+
+<!-- LAYANAN -->
+<section id="layanan" class="py-24 px-6 bg-slate-50">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <div class="text-amber-500 font-black text-xs uppercase tracking-widest mb-3">Our Services</div>
+      <h2 class="text-4xl font-black text-slate-900 mb-4">Layanan Kami</h2>
+      <div class="divider w-16 mx-auto mb-4"></div>
+      <p class="text-slate-500 max-w-xl mx-auto">Kami menyediakan layanan pertambangan terintegrasi dengan standar profesional tinggi.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white rounded-2xl p-8 shadow-sm card-hover border border-slate-100">
+        <div class="w-14 h-14 bg-amber-50 text-amber-500 rounded-2xl flex items-center justify-center text-2xl mb-6">
+          <i class="fas fa-mountain"></i>
         </div>
-    </nav>
-
-    <section id="home" class="relative h-screen flex items-center overflow-hidden">
-        <img src="img/hero-unit.jpg" class="absolute inset-0 w-full h-full object-cover" alt="PT SSU Mining Operation">
-        <div class="absolute inset-0 hero-overlay"></div>
-        
-        <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12">
-            <div class="max-w-2xl">
-                <h1 class="text-5xl md:text-7xl font-bold text-white leading-tight mb-6">
-                    Reliable Partner in <br><span class="text-indigo-400">Mining Solutions.</span>
-                </h1>
-                <p class="text-lg text-slate-300 font-light leading-relaxed mb-10">
-                    Menyediakan jasa kontraktor pertambangan dan penyewaan alat berat terintegrasi dengan standar keselamatan dan efisiensi tinggi di Kalimantan Timur.
-                </p>
-                <a href="#tentang" class="inline-block px-8 py-4 bg-indigo-600 text-white font-bold rounded hover:bg-indigo-700 transition shadow-lg">
-                    Pelajari Lebih Lanjut
-                </a>
-            </div>
+        <h3 class="text-xl font-black text-slate-900 mb-3">Mining Contractor</h3>
+        <p class="text-slate-500 leading-relaxed text-sm">Jasa kontraktor pertambangan batubara meliputi overburden removal, coal getting, dan land clearing dengan armada alat berat modern.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-8 shadow-sm card-hover border border-slate-100">
+        <div class="w-14 h-14 bg-indigo-50 text-indigo-500 rounded-2xl flex items-center justify-center text-2xl mb-6">
+          <i class="fas fa-truck-pickup"></i>
         </div>
-    </section>
+        <h3 class="text-xl font-black text-slate-900 mb-3">Rental Alat Berat</h3>
+        <p class="text-slate-500 leading-relaxed text-sm">Penyewaan alat berat berkualitas — Excavator, Bulldozer, Dump Truck, Motor Grader — dengan operator berpengalaman dan perawatan rutin.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-8 shadow-sm card-hover border border-slate-100">
+        <div class="w-14 h-14 bg-emerald-50 text-emerald-500 rounded-2xl flex items-center justify-center text-2xl mb-6">
+          <i class="fas fa-fire"></i>
+        </div>
+        <h3 class="text-xl font-black text-slate-900 mb-3">Coal Trading</h3>
+        <p class="text-slate-500 leading-relaxed text-sm">Perdagangan batubara berkualitas dengan komitmen menyediakan bahan mentah yang ramah lingkungan sesuai standar industri.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section id="tentang" class="py-24 px-6 md:px-12 bg-slate-50">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+<!-- ARMADA -->
+<section id="armada" class="py-24 px-6 bg-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <div class="text-amber-500 font-black text-xs uppercase tracking-widest mb-3">Our Fleet</div>
+      <h2 class="text-4xl font-black text-slate-900 mb-4">Armada Operasional</h2>
+      <div class="divider w-16 mx-auto mb-4"></div>
+      <p class="text-slate-500 max-w-xl mx-auto">Unit handal dengan perawatan rutin untuk menjamin produktivitas dan keandalan di lapangan.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+      <!-- Card template — duplikat dan ganti img/nama sesuai unit -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 card-hover">
+        <div class="h-48 bg-slate-100 overflow-hidden">
+          <img src="img/unit-ex200.jpg" alt="Excavator PC 200" class="w-full h-full object-cover hover:scale-105 transition duration-500"
+               onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-slate-300\'><i class=\'fas fa-truck-pickup text-4xl\'></i></div>'">
+        </div>
+        <div class="p-5">
+          <div class="text-[10px] font-black text-amber-500 uppercase tracking-widest mb-1">Excavator</div>
+          <h3 class="font-black text-slate-900 text-base">Komatsu PC 200</h3>
+          <p class="text-slate-500 text-xs mt-1">Coal Getting & Overburden Removal</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 card-hover">
+        <div class="h-48 bg-slate-100 overflow-hidden">
+          <img src="img/unit-ex300.jpg" alt="Excavator PC 300" class="w-full h-full object-cover hover:scale-105 transition duration-500"
+               onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-slate-300\'><i class=\'fas fa-truck-pickup text-4xl\'></i></div>'">
+        </div>
+        <div class="p-5">
+          <div class="text-[10px] font-black text-amber-500 uppercase tracking-widest mb-1">Excavator</div>
+          <h3 class="font-black text-slate-900 text-base">Komatsu PC 300</h3>
+          <p class="text-slate-500 text-xs mt-1">Heavy Overburden & Loading</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 card-hover">
+        <div class="h-48 bg-slate-100 overflow-hidden">
+          <img src="img/unit-bd.jpg" alt="Bulldozer" class="w-full h-full object-cover hover:scale-105 transition duration-500"
+               onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-slate-300\'><i class=\'fas fa-truck-pickup text-4xl\'></i></div>'">
+        </div>
+        <div class="p-5">
+          <div class="text-[10px] font-black text-amber-500 uppercase tracking-widest mb-1">Bulldozer</div>
+          <h3 class="font-black text-slate-900 text-base">Komatsu D85</h3>
+          <p class="text-slate-500 text-xs mt-1">Land Clearing & Dozing</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 card-hover">
+        <div class="h-48 bg-slate-100 overflow-hidden">
+          <img src="img/unit-dt.jpg" alt="Dump Truck" class="w-full h-full object-cover hover:scale-105 transition duration-500"
+               onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-slate-300\'><i class=\'fas fa-truck text-4xl\'></i></div>'">
+        </div>
+        <div class="p-5">
+          <div class="text-[10px] font-black text-amber-500 uppercase tracking-widest mb-1">Dump Truck</div>
+          <h3 class="font-black text-slate-900 text-base">Hino 500</h3>
+          <p class="text-slate-500 text-xs mt-1">Coal & OB Hauling</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 card-hover">
+        <div class="h-48 bg-slate-100 overflow-hidden">
+          <img src="img/unit-grader.jpg" alt="Motor Grader" class="w-full h-full object-cover hover:scale-105 transition duration-500"
+               onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-slate-300\'><i class=\'fas fa-road text-4xl\'></i></div>'">
+        </div>
+        <div class="p-5">
+          <div class="text-[10px] font-black text-amber-500 uppercase tracking-widest mb-1">Motor Grader</div>
+          <h3 class="font-black text-slate-900 text-base">Komatsu GD</h3>
+          <p class="text-slate-500 text-xs mt-1">Road Maintenance & Grading</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 card-hover">
+        <div class="h-48 bg-slate-100 overflow-hidden">
+          <img src="img/unit-wl.jpg" alt="Wheel Loader" class="w-full h-full object-cover hover:scale-105 transition duration-500"
+               onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-slate-300\'><i class=\'fas fa-truck-pickup text-4xl\'></i></div>'">
+        </div>
+        <div class="p-5">
+          <div class="text-[10px] font-black text-amber-500 uppercase tracking-widest mb-1">Wheel Loader</div>
+          <h3 class="font-black text-slate-900 text-base">Komatsu WA</h3>
+          <p class="text-slate-500 text-xs mt-1">Loading & Material Handling</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 card-hover">
+        <div class="h-48 bg-slate-100 overflow-hidden">
+          <img src="img/unit-compactor.jpg" alt="Compactor" class="w-full h-full object-cover hover:scale-105 transition duration-500"
+               onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-slate-300\'><i class=\'fas fa-truck-pickup text-4xl\'></i></div>'">
+        </div>
+        <div class="p-5">
+          <div class="text-[10px] font-black text-amber-500 uppercase tracking-widest mb-1">Compactor</div>
+          <h3 class="font-black text-slate-900 text-base">Bomag / Sakai</h3>
+          <p class="text-slate-500 text-xs mt-1">Road & Embankment Compaction</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 card-hover">
+        <div class="h-48 bg-slate-100 overflow-hidden">
+          <img src="img/unit-watertruck.jpg" alt="Water Truck" class="w-full h-full object-cover hover:scale-105 transition duration-500"
+               onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-slate-300\'><i class=\'fas fa-tint text-4xl\'></i></div>'">
+        </div>
+        <div class="p-5">
+          <div class="text-[10px] font-black text-amber-500 uppercase tracking-widest mb-1">Water Truck</div>
+          <h3 class="font-black text-slate-900 text-base">Hino / Isuzu</h3>
+          <p class="text-slate-500 text-xs mt-1">Dust Suppression & Road Watering</p>
+        </div>
+      </div>
+
+    </div>
+    <p class="text-center text-slate-400 text-xs mt-8 italic">* Gambar unit dapat diupdate langsung melalui folder <code class="bg-slate-100 px-1 rounded">img/</code> di repository GitHub</p>
+  </div>
+</section>
+
+<!-- VISI & MISI -->
+<section id="visi" class="py-24 px-6 bg-slate-900 text-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <div class="text-amber-400 font-black text-xs uppercase tracking-widest mb-3">Vision & Mission</div>
+      <h2 class="text-4xl font-black mb-4">Visi &amp; Misi Perusahaan</h2>
+      <div class="divider w-16 mx-auto"></div>
+    </div>
+    <div class="grid md:grid-cols-2 gap-8 mb-12">
+      <!-- Visi -->
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-8">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-12 h-12 bg-amber-500/20 text-amber-400 rounded-xl flex items-center justify-center text-xl">
+            <i class="fas fa-eye"></i>
+          </div>
+          <div>
+            <div class="text-[10px] font-black text-amber-400 uppercase tracking-widest">Our Vision</div>
+            <h3 class="font-black text-white text-lg">Visi</h3>
+          </div>
+        </div>
+        <p class="text-slate-300 leading-relaxed">
+          Menjadi perusahaan Trading dan Jasa yang terintegrasi di Indonesia yang mengedepankan kualitas
+          profesional pelayanan dengan tetap menjaga lingkungan.
+        </p>
+        <p class="text-slate-500 italic text-sm mt-3">
+          "Become an integrated trading and service company in Indonesia that prioritizes professional service
+          while maintaining the environment."
+        </p>
+      </div>
+      <!-- Misi -->
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-8 space-y-5">
+        <div class="flex items-center gap-3 mb-2">
+          <div class="w-12 h-12 bg-indigo-500/20 text-indigo-400 rounded-xl flex items-center justify-center text-xl">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <div>
+            <div class="text-[10px] font-black text-indigo-400 uppercase tracking-widest">Our Mission</div>
+            <h3 class="font-black text-white text-lg">Misi</h3>
+          </div>
+        </div>
+        <div class="flex gap-3">
+          <div class="w-8 h-8 bg-amber-500/20 text-amber-400 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+            <i class="fas fa-star text-xs"></i>
+          </div>
+          <div>
+            <div class="font-bold text-white text-sm mb-1">Produk Unggulan</div>
+            <p class="text-slate-400 text-sm">Menyediakan produk-produk terbaik untuk mengoptimalkan kepuasan pelanggan.</p>
+          </div>
+        </div>
+        <div class="flex gap-3">
+          <div class="w-8 h-8 bg-emerald-500/20 text-emerald-400 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+            <i class="fas fa-handshake text-xs"></i>
+          </div>
+          <div>
+            <div class="font-bold text-white text-sm mb-1">Lapangan Pekerjaan</div>
+            <p class="text-slate-400 text-sm">Menciptakan lapangan pekerjaan yang layak untuk rakyat Indonesia & berkomitmen menjaga lingkungan sekitar area pertambangan.</p>
+          </div>
+        </div>
+        <div class="flex gap-3">
+          <div class="w-8 h-8 bg-indigo-500/20 text-indigo-400 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+            <i class="fas fa-chart-line text-xs"></i>
+          </div>
+          <div>
+            <div class="font-bold text-white text-sm mb-1">Konsisten Perusahaan</div>
+            <p class="text-slate-400 text-sm">Konsisten dalam melakukan pertumbuhan bisnis yang berkelanjutan dan menguntungkan pemegang saham.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAK -->
+<section id="kontak" class="py-24 px-6 bg-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <div class="text-amber-500 font-black text-xs uppercase tracking-widest mb-3">Get In Touch</div>
+      <h2 class="text-4xl font-black text-slate-900 mb-4">Hubungi Kami</h2>
+      <div class="divider w-16 mx-auto"></div>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-slate-50 rounded-2xl p-8 text-center card-hover border border-slate-100">
+        <div class="w-14 h-14 bg-green-50 text-green-500 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4">
+          <i class="fab fa-whatsapp"></i>
+        </div>
+        <h3 class="font-black text-slate-900 mb-2">WhatsApp</h3>
+        <p class="text-slate-500 text-sm mb-4">Hubungi kami langsung via WhatsApp</p>
+        <a href="https://wa.me/6287754598014" target="_blank"
+           class="inline-block bg-green-500 hover:bg-green-600 text-white px-6 py-2.5 rounded-xl font-bold text-sm transition">
+          +62 877-5459-8014
+        </a>
+      </div>
+      <div class="bg-slate-50 rounded-2xl p-8 text-center card-hover border border-slate-100">
+        <div class="w-14 h-14 bg-amber-50 text-amber-500 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <h3 class="font-black text-slate-900 mb-2">Alamat Kantor</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">
+          JL Batu Cermin Villa Anna Residence<br>Blok H No 1, Sempaja Utara<br>
+          Samarinda Utara, Kalimantan Timur
+        </p>
+      </div>
+      <div class="bg-slate-50 rounded-2xl p-8 text-center card-hover border border-slate-100">
+        <div class="w-14 h-14 bg-indigo-50 text-indigo-500 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <h3 class="font-black text-slate-900 mb-2">Email</h3>
+        <p class="text-slate-500 text-sm mb-4">Kirim pertanyaan atau penawaran</p>
+        <a href="mailto:info@ssukaltim.my.id"
+           class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-2.5 rounded-xl font-bold text-sm transition">
+          Kirim Email
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-slate-900 text-white py-14 px-6">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-3 gap-10 border-b border-slate-800 pb-10 mb-8">
+
+      <!-- Kolom 1: Info Perusahaan -->
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <img src="img/logo.png" alt="Logo" class="h-10 w-auto" onerror="this.style.display='none'">
+          <div>
+            <div class="font-black text-white text-sm">PT SHAFIRA SATYA UTAMA</div>
+            <div class="text-[10px] text-slate-400 uppercase tracking-widest">Mining & Coal Trading</div>
+          </div>
+        </div>
+        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+          Perusahaan jasa pertambangan, batubara, dan rental alat berat yang berkomitmen pada kualitas dan lingkungan.
+        </p>
+        <div class="flex gap-3">
+          <a href="https://wa.me/6287754598014" target="_blank"
+             class="w-9 h-9 bg-slate-800 hover:bg-green-600 rounded-xl flex items-center justify-center transition">
+            <i class="fab fa-whatsapp text-sm"></i>
+          </a>
+          <a href="mailto:info@shafirasatyautama.com"
+             class="w-9 h-9 bg-slate-800 hover:bg-indigo-600 rounded-xl flex items-center justify-center transition">
+            <i class="fas fa-envelope text-sm"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Kolom 2: Navigasi -->
+      <div>
+        <h4 class="font-black text-white text-sm mb-5 uppercase tracking-wider">Navigasi</h4>
+        <ul class="space-y-2.5 text-sm text-slate-400">
+          <li><a href="#tentang"  class="hover:text-amber-400 transition flex items-center gap-2"><i class="fas fa-chevron-right text-[9px] text-amber-500"></i> Tentang Perusahaan</a></li>
+          <li><a href="#layanan"  class="hover:text-amber-400 transition flex items-center gap-2"><i class="fas fa-chevron-right text-[9px] text-amber-500"></i> Layanan</a></li>
+          <li><a href="#armada"   class="hover:text-amber-400 transition flex items-center gap-2"><i class="fas fa-chevron-right text-[9px] text-amber-500"></i> Armada</a></li>
+          <li><a href="#visi"     class="hover:text-amber-400 transition flex items-center gap-2"><i class="fas fa-chevron-right text-[9px] text-amber-500"></i> Visi & Misi</a></li>
+          <li><a href="#kontak"   class="hover:text-amber-400 transition flex items-center gap-2"><i class="fas fa-chevron-right text-[9px] text-amber-500"></i> Kontak</a></li>
+        </ul>
+      </div>
+
+      <!-- Kolom 3: Staff Login -->
+      <div>
+        <h4 class="font-black text-white text-sm mb-5 uppercase tracking-wider">Staff Resources</h4>
+        <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 bg-indigo-500/20 text-indigo-400 rounded-xl flex items-center justify-center">
+              <i class="fas fa-lock text-sm"></i>
+            </div>
             <div>
-                <h2 class="text-3xl md:text-4xl font-bold section-title text-slate-900">Membangun Masa Depan Energi Kalimantan.</h2>
-                <div class="mt-10 space-y-6 text-slate-600 leading-relaxed">
-                    <p>PT Shafira Satya Utama hadir sebagai respon atas kebutuhan industri pertambangan yang dinamis. Kami fokus pada kualitas mekanis armada dan ketepatan waktu operasional.</p>
-                    <p>Dengan tim berpengalaman dan sistem manajemen digital yang canggih, kami memastikan setiap proyek berjalan sesuai target produksi klien kami.</p>
-                </div>
+              <div class="font-black text-white text-sm">Internal Portal</div>
+              <div class="text-[10px] text-slate-500">Mining Management System</div>
             </div>
-            <div class="grid grid-cols-2 gap-4">
-                <div class="bg-white p-8 border-b-4 border-indigo-600 shadow-sm">
-                    <span class="block text-4xl font-bold text-indigo-600 mb-2">10+</span>
-                    <span class="text-xs uppercase tracking-widest font-bold text-slate-400">Unit Alat Berat</span>
-                </div>
-                <div class="bg-white p-8 border-b-4 border-indigo-600 shadow-sm">
-                    <span class="block text-4xl font-bold text-indigo-600 mb-2">100%</span>
-                    <span class="text-xs uppercase tracking-widest font-bold text-slate-400">Safety Record</span>
-                </div>
-            </div>
+          </div>
+          <p class="text-xs text-slate-500 mb-4 leading-relaxed">
+            Akses sistem manajemen operasional, payroll, dan laporan internal PT Shafira Satya Utama.
+          </p>
+          <a href="app.html" target="_blank"
+             class="flex items-center justify-between w-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2.5 rounded-xl font-bold text-xs transition group">
+            <span><i class="fas fa-sign-in-alt mr-2"></i> STAFF LOGIN</span>
+            <i class="fas fa-arrow-right group-hover:translate-x-1 transition"></i>
+          </a>
         </div>
-    </section>
+      </div>
 
-    <section id="armada" class="py-24 px-6 md:px-12 bg-white">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-slate-900 mb-4">Armada Kami</h2>
-                <p class="text-slate-500 max-w-xl mx-auto">Unit pilihan dengan perawatan berkala untuk hasil kerja maksimal.</p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="group cursor-pointer">
-                    <div class="overflow-hidden rounded-lg mb-4 h-64 bg-slate-200">
-                        <img src="img/unit1.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900">Komatsu D85SS</h3>
-                    <p class="text-sm text-slate-500 mt-1 uppercase tracking-tighter">Bulldozer Division</p>
-                </div>
-                </div>
-        </div>
-    </section>
+    </div>
 
-    <footer id="kontak" class="bg-slate-900 text-white py-20 px-6 md:px-12">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-3 gap-12 border-b border-slate-800 pb-16">
-               <div class="col-span-1">
-                    <div class="flex items-center space-x-3 mb-6">
-                        <img src="img/logo.png" alt="Logo PT SSU" class="h-8 w-auto object-contain">
-                        
-                        <span class="text-lg font-bold text-white tracking-tighter">PT Shafira Satya Utama</span>
-                    </div>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Professional Mining & Heavy Equipment Contractor. <br>
-                        Berbasis di Samarinda, Kalimantan Timur.
-                    </p>
-                </div>
-                
-                <div>
-                    <h4 class="font-bold mb-6 text-sm uppercase tracking-widest">Kontak</h4>
-                    <ul class="text-slate-400 text-sm space-y-4 font-light">
-                        <li><i class="fas fa-map-marker-alt mr-3 text-indigo-500"></i> Samarinda, Kalimantan Timur</li>
-                        <li><i class="fas fa-envelope mr-3 text-indigo-500"></i> admin@ssukaltim.my.id</li>
-                    </ul>
-                </div>
-
-                <div class="bg-slate-800/50 p-8 rounded-lg border border-slate-700">
-                    <h4 class="font-bold mb-4 text-sm text-white">Staff Resources</h4>
-                    <p class="text-xs text-slate-500 mb-6 font-light italic">Halaman akses PT Shafira Satya Utama.</p>
-                    <a href="app.html" 
-                       target="_blank" 
-                       class="text-xs font-bold text-indigo-400 hover:text-white transition flex items-center group">
-                        INTERNAL LOGIN <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-slate-600 uppercase tracking-[0.3em] font-bold">
-                <p>© 2026 PT Shafira Satya Utama</p>
-                <p class="mt-4 md:mt-0 italic">Excellence in Mining Operation</p>
-            </div>
-        </div>
-    </footer>
+    <!-- Bottom bar -->
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+      <span>&copy; 2026 PT Shafira Satya Utama. Seluruh Hak Cipta Dilindungi.</span>
+      <span class="flex items-center gap-1.5">
+        <i class="fas fa-map-marker-alt text-amber-500"></i>
+        JL Batu Cermin Villa Anna Residence Blok H No 1, Sempaja Utara, Samarinda Utara, Kalimantan Timur
+      </span>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
